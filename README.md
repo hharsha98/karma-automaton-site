@@ -8,6 +8,14 @@
 A small local website for keeping an eye on the "Karma" automaton AI agent
 and letting people ask to hire it.
 
+## 🎬 Demo
+
+<p align="center">
+  <img src="docs/demo.gif" alt="Live dashboard, then the storefront: filling in a request and getting a confirmation" width="90%" />
+</p>
+
+<p align="center"><sub>The live "mission control" dashboard → the storefront → submitting a work request → confirmation.</sub></p>
+
 - **`/`** — Dashboard: a live "mission control" view of Karma's status,
   wallet, recent turns (thoughts/actions), SOUL.md identity file, metrics,
   and scheduled heartbeat tasks. Auto-refreshes every 5 seconds.
