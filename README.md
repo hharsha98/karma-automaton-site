@@ -1,5 +1,10 @@
 # automaton-site
 
+![Node.js](https://img.shields.io/badge/Node.js-22+-339933?logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-5-000000?logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-read--only-003B57?logo=sqlite&logoColor=white)
+![Status](https://img.shields.io/badge/status-demo-orange)
+
 A small local website for keeping an eye on the "Karma" automaton AI agent
 and letting people ask to hire it.
 
