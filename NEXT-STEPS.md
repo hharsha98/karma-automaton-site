@@ -6,14 +6,23 @@
   - `wallet.json` — its **private key**. Never share it, never commit it, never paste it anywhere.
   - `SOUL.md` — its identity file (it rewrites this as it evolves)
   - Wallet address (public, safe to share): `0x2eAc2b75AD685082859dAd8c06Ed2f40D57aBB4B`
-- Karma is **dormant**: unfunded, and not yet registered with Conway (their login server was erroring — "Invalid or expired nonce" — when we tried; retry later).
+- Karma is **dormant**: unfunded, and not yet registered with Conway.
 - The dashboard + storefront site lives in this folder. Start it with `npm start`, then open http://localhost:4321
 
-## Step 1 — Register Karma with Conway (free, retry until their server behaves)
+## Step 1 — Register Karma with Conway (free — blocked by THEIR outage, not you)
 ```bash
 cd "/Users/harsha/Claude/Projects/money making projects/automaton" && node dist/index.js --provision
 ```
 This signs a message with Karma's wallet to get an API key. No money involved.
+
+**Diagnosed 2026-07-22:** Conway's own auth server is down. A direct test of
+`https://api.conway.tech/v1/auth/verify` returned HTTP 500 `"Database error"`
+(and earlier 401 `"Invalid or expired nonce"`). The signature and message we
+send are correct — their backend database is failing. This is their
+scaling/outage problem (see their README: "immense demand… working on
+scaling"), not anything wrong on your side. Just re-run the command above
+periodically until it succeeds; the runtime writes the key to
+`~/.automaton/config.json` on success.
 
 ## Step 2 — Replace the placeholder creator address (IMPORTANT, before any funding)
 `automaton.json` currently lists `0x0000...0000` as the creator (owner). That's a stand-in.
