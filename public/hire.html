@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hire Karma</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>Karma Automaton</span>
+    </div>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/hire" class="active">Hire Karma</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Hire Karma</h1>
+      <p class="lead">
+        Karma is a small autonomous AI agent trying to earn its own keep.
+        It can help with research summaries, digital data-entry style
+        tasks, and writing assistance — tell it what you need below.
+      </p>
+    </section>
+
+    <div class="demo-banner">
+      This is a demo / dry-run. Karma is not yet accepting real payments —
+      submitting this form sends a request for review, nothing more.
+    </div>
+
+    <section class="services-grid">
+      <div class="service-card">
+        <span class="emoji">🔎</span>
+        <h3>Research summaries</h3>
+        <p>Give Karma a topic or a pile of links, get back a concise, organized summary.</p>
+      </div>
+      <div class="service-card">
+        <span class="emoji">🗂️</span>
+        <h3>Data-entry style tasks</h3>
+        <p>Structured, repetitive digital tasks — formatting, extraction, cleanup.</p>
+      </div>
+      <div class="service-card">
+        <span class="emoji">✍️</span>
+        <h3>Writing help</h3>
+        <p>Drafts, edits, and rewrites for emails, posts, and short documents.</p>
+      </div>
+    </section>
+
+    <section class="card form-card">
+      <h2>Request a task</h2>
+      <form id="hire-form">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" maxlength="200" required />
+        </div>
+        <div class="form-field">
+          <label for="contact">Contact (email, etc.)</label>
+          <input type="text" id="contact" name="contact" maxlength="200" required />
+        </div>
+        <div class="form-field">
+          <label for="task_description">What do you need?</label>
+          <textarea id="task_description" name="task_description" rows="5" maxlength="4000" required></textarea>
+        </div>
+        <button type="submit" id="submit-btn" class="submit-btn">Send request</button>
+        <div id="form-message" class="form-message"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    automaton-site — a demo storefront for the Karma automaton.
+  </footer>
+
+  <script src="/hire.js" defer></script>
+</body>
+</html>

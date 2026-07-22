@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karma — Mission Control</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>Karma Automaton</span>
+    </div>
+    <nav>
+      <a href="/" class="active">Dashboard</a>
+      <a href="/hire">Hire Karma</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="header-row">
+      <div class="agent-title">
+        <h1 id="agent-name">Karma</h1>
+        <span id="status-pill" class="status-pill unset">
+          <span class="dot"></span>
+          <span class="label">loading…</span>
+        </span>
+        <span id="wallet-chip" class="wallet-chip" style="display: none">
+          <span class="addr"></span>
+          <span class="copy-hint">click to copy</span>
+        </span>
+      </div>
+      <div id="last-updated" class="last-updated">Last updated: —</div>
+    </div>
+
+    <div class="grid">
+      <!-- Balance / spend card -->
+      <section class="card">
+        <h2>Balance</h2>
+        <div id="balance-value" class="balance-value">$0.00</div>
+        <div id="balance-sub" class="balance-sub">loading…</div>
+        <span id="dry-run-badge" class="badge-dry-run" style="display: none">unfunded — dry run</span>
+      </section>
+
+      <!-- Metrics tiles card -->
+      <section class="card">
+        <h2>Metrics</h2>
+        <div id="metrics-tiles" class="metrics-tiles"></div>
+        <div id="last-activity" class="balance-sub" style="margin-top: 10px">Last activity: —</div>
+      </section>
+
+      <!-- Recent turns feed -->
+      <section class="card wide">
+        <h2>Recent Turns</h2>
+        <div id="turns-feed" class="turns-feed">
+          <div class="empty-state">Loading…</div>
+        </div>
+      </section>
+
+      <!-- SOUL.md -->
+      <section class="card wide">
+        <h2>SOUL.md</h2>
+        <pre id="soul-text" class="soul-text">Loading…</pre>
+      </section>
+
+      <!-- Heartbeat tasks -->
+      <section class="card wide">
+        <h2>Heartbeat Tasks</h2>
+        <pre id="heartbeat-text" class="heartbeat-text">Loading…</pre>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    automaton-site — local mission control, refreshes every 5 seconds.
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

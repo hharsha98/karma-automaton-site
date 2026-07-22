@@ -1,0 +1,17 @@
+{
+  "name": "automaton-site",
+  "version": "1.0.0",
+  "description": "Local mission-control dashboard + storefront for the Karma automaton agent",
+  "type": "module",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.3.0"
+  }
+}
